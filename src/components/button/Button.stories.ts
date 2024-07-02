@@ -66,3 +66,16 @@ export const Warning: Story = {
     backgroundColor: 'red',
   }
 };
+
+export const Dark: Story = {
+  parameters: {
+    themes: {
+      themeOverride: 'dark'
+    }
+  },
+  args: {
+    primary: true,
+    label: 'Delete now',
+    backgroundColor: 'red',
+  }
+};
