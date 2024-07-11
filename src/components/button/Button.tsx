@@ -45,6 +45,7 @@ export const Button = ({
       type="button"
       className={clsx(
         'storybook-button',
+        'test',
         `storybook-button--${size}`,
         mode,
         'button'
