@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 type BaseButtonProps = ComponentProps<'button'>;
 
-interface ButtonProps extends BaseButtonProps {
+export interface JieFstlnButtonProps extends BaseButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
@@ -38,7 +38,7 @@ export const Button = ({
   backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
+}: JieFstlnButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
