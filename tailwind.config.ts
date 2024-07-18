@@ -18,6 +18,7 @@ export default {
         sans: ['Inter Variable', 'sans-serif'],
       },
       colors: {
+        ...colors,
         information: {...colors.information},
         success: {...colors.success},
         warning: {...colors.warning},

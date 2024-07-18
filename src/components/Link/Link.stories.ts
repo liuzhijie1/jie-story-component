@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/react'
+import { fn } from '@storybook/test'
 
-import { Link } from './Link';
+import { Link } from './Link'
 
 const meta = {
   title: 'Components/Link',
@@ -10,18 +10,26 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
+    layout: 'centered'
   },
-  args: {
-    onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn(),
-  },
-} satisfies Meta<typeof Link>;
+  args: {}
+} satisfies Meta<typeof Link>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const LinkNormal: Story = {
-};
+  args: {
+    size: 'default',
+    variant: 'link',
+    children: 'Click me'
+  }
+}
 
+export const LinkExternal: Story = {
+  args: {
+    size: 'default',
+    variant: 'link',
+    external: true
+  }
+}

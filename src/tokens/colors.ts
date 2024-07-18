@@ -1,4 +1,6 @@
+import tailwindColors from 'tailwindcss/colors';
 export const colors = {
+  ...tailwindColors,
   primary: {
     '50': '#faf7fd',
     '100': '#f2ecfb',

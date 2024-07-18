@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   type LucideIcon,
   AlertTriangle,
@@ -21,6 +22,7 @@ import {
   Star,
   X,
   Zap,
+  Focus,
 } from 'lucide-react';
 import { ComponentProps } from 'react';
 
@@ -46,7 +48,8 @@ export type IconProps = ComponentProps<LucideIcon> & {
     | 'success'
     | 'warning'
     | 'x'
-    | 'zap';
+    | 'zap'
+    | 'focus';
 };
 
 const iconComponents: Record<IconProps['type'], LucideIcon> = {
@@ -71,6 +74,7 @@ const iconComponents: Record<IconProps['type'], LucideIcon> = {
   warning: AlertTriangle,
   x: X,
   zap: Zap,
+  focus: Focus,
 };
 
 export const Icon = ({ type, ...props }: IconProps) => {
