@@ -18,17 +18,13 @@ export const Link: React.FC<LinkProps> = ({
   ...props
 }) => {
   return (
-    <div className="fstln-flex-row fstln-flex fstln-items-center">
-      <Button
-        variant="link"
-        className="fstln-text-sky-500 hover:fstln-text-slate-300 active:fstln-text-destructive fstln-px-1"
-        asChild
-        onClick={() => alert('Button clicked')}
-        {...props}
-      >
-        <a href="https://www.baidu.com">{children}</a>
-      </Button>
-      {external && <Icon type="external" className="fstln-text-sky-500" size={14} />}
-    </div>
+    <Button variant="link" asChild onClick={() => alert('Button clicked')} {...props}>
+      <span className="fstln-text-sky-500 hover:fstln-text-slate-300 active:fstln-text-destructive hover:fstln-underline">
+        <a href={url} className="fstln-flex-row fstln-flex fstln-items-center fstln-mr-1">
+          {children}
+          {external && <span className="fstln-underline"><Icon type="external" size={14} /></span>}
+        </a>
+      </span>
+    </Button>
   )
 }
