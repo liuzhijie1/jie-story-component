@@ -42,7 +42,7 @@
 	gap: 0.375rem;
 	padding: 0.375rem 0.75rem;
 	transition: background-color 0.2s; */
-  @apply bg-primary-600 inline-flex cursor-pointer items-center gap-1.5 rounded border border-transparent px-2.5 py-1.5 text-white shadow-sm transition-colors;
+  @apply fstln-bg-primary-600 fstln-inline-flex fstln-cursor-pointer fstln-items-center fstln-gap-1.5 fstln-rounded fstln-border fstln-border-transparent fstln-px-2.5 fstln-py-1.5 fstln-text-white fstln-shadow-sm fstln-transition-colors;
 }
 
 /* Focus visible styles */

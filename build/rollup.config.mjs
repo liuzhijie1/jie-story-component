@@ -11,6 +11,9 @@ import json from '@rollup/plugin-json'
 import fs, { readFileSync } from 'fs'
 import excludeDependenciesFromBundle from 'rollup-plugin-exclude-dependencies-from-bundle'
 import babel from '@rollup/plugin-babel';
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
+import postcss from 'rollup-plugin-postcss'
 
 
 const config = JSON.parse(readFileSync(new URL('../package.json', import.meta.url)));
@@ -24,7 +27,6 @@ let overrides = {
   compilerOptions: { declaration: true },
   exclude: [
     "node_modules",
-    "src/App.vue",
     "src/main.ts",
     "src/router/**"
   ]
@@ -57,11 +59,20 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],  // 指定 Babel 应处理的文件扩展名
       exclude: 'node_modules/**'  // 排除 node_modules
     }),
-    css({
-      output(style) {
-        !fs.existsSync('dist') && fs.mkdirSync('dist')
-        fs.writeFileSync(`dist/${name}.css`, style)
-      }
+    // css({
+    //   output(style) {
+    //     !fs.existsSync('dist') && fs.mkdirSync('dist')
+    //     fs.writeFileSync(`dist/${name}.css`, style)
+    //   }
+    // }),
+    postcss({
+      plugins: [
+        tailwindcss(),
+        autoprefixer()
+      ],
+      inject: false,
+      extract: 'index.css',
+      minimize: true
     }),
     cjs(),
     // replace({

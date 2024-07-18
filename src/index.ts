@@ -1,3 +1,6 @@
-import { Button } from "./components/button/Button";
+// import { Button } from "./components/button/Button";
+import { Link } from "./components/Link";
 
-export {Button}
+import './global.css';
+
+export { Link}

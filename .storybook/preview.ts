@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react";
 
-import '../src/index.css';
+// import '../src/index.css';
+import '../src/global.css';
 
 import { withThemeByClassName } from "@storybook/addon-themes";
 
