@@ -12,7 +12,7 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered'
   },
-  args: {}
+  args: { onClick: fn(), size: 'default', variant: 'link' }
 } satisfies Meta<typeof Link>
 
 export default meta
@@ -31,5 +31,14 @@ export const LinkExternal: Story = {
     size: 'default',
     variant: 'link',
     external: true
+  }
+}
+
+export const LinkRemovelUnderLink: Story = {
+  args: {
+    size: 'default',
+    variant: 'link',
+    external: true,
+    removeUnderline: true
   }
 }
