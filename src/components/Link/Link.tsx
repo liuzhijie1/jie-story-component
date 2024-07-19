@@ -48,6 +48,7 @@ export const Link: React.FC<LinkProps> = React.forwardRef<HTMLElement, LinkProps
             'active:fstln-text-shopify-Link-pressed',
             'hover:fstln-decoration-shopify-Link-hover',
             'active:fstln-decoration-shopify-Link-pressed',
+            'fstln-font-normal',
             removeUnderline && 'hover:fstln-no-underline'
           )}
         >
