@@ -23,6 +23,9 @@ import {
   X,
   Zap,
   Focus,
+  Image,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
 import { ComponentProps } from 'react';
 
@@ -49,6 +52,9 @@ export type IconProps = ComponentProps<LucideIcon> & {
     | 'warning'
     | 'x'
     | 'zap'
+    | 'image'
+    | 'chevron-left'
+    | 'chevron-right'
     | 'focus';
 };
 
@@ -75,6 +81,9 @@ const iconComponents: Record<IconProps['type'], LucideIcon> = {
   x: X,
   zap: Zap,
   focus: Focus,
+  image: Image,
+  'chevron-left': ChevronLeft,
+  'chevron-right': ChevronRight,
 };
 
 export const Icon = ({ type, ...props }: IconProps) => {
