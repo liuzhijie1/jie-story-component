@@ -1,7 +1,8 @@
 // import { Button } from "./components/button/Button";
 import { Link } from './components/Link'
 import { Menu } from './components/Menu'
+import { Icon } from './components/icon'
 
 import './global.css'
 
-export { Link, Menu }
+export { Link, Menu, Icon }
