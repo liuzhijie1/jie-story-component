@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   type LucideIcon,
   AlertTriangle,
@@ -26,8 +26,21 @@ import {
   Image,
   ChevronLeft,
   ChevronRight,
-} from 'lucide-react';
-import { ComponentProps } from 'react';
+  File,
+  Home,
+  LineChart,
+  ListFilter,
+  MoreHorizontal,
+  Package,
+  Package2,
+  PanelLeft,
+  PlusCircle,
+  Search,
+  Settings,
+  ShoppingCart,
+  Users2
+} from 'lucide-react'
+import { ComponentProps } from 'react'
 
 export type IconProps = ComponentProps<LucideIcon> & {
   type:
@@ -55,8 +68,21 @@ export type IconProps = ComponentProps<LucideIcon> & {
     | 'image'
     | 'chevron-left'
     | 'chevron-right'
-    | 'focus';
-};
+    | 'file'
+    | 'home'
+    | 'line-chart'
+    | 'list-filter'
+    | 'more-horizontal'
+    | 'package'
+    | 'package2'
+    | 'panel-left'
+    | 'plus-circle'
+    | 'search'
+    | 'settings'
+    | 'shopping-cart'
+    | 'users2'
+    | 'focus'
+}
 
 const iconComponents: Record<IconProps['type'], LucideIcon> = {
   bug: Bug,
@@ -84,11 +110,24 @@ const iconComponents: Record<IconProps['type'], LucideIcon> = {
   image: Image,
   'chevron-left': ChevronLeft,
   'chevron-right': ChevronRight,
-};
+  file: File,
+  home: Home,
+  'line-chart': LineChart,
+  'list-filter': ListFilter,
+  'more-horizontal': MoreHorizontal,
+  package: Package,
+  package2: Package2,
+  'panel-left': PanelLeft,
+  'plus-circle': PlusCircle,
+  search: Search,
+  settings: Settings,
+  'shopping-cart': ShoppingCart,
+  users2: Users2
+}
 
 export const Icon = ({ type, ...props }: IconProps) => {
-  const IconComponent = iconComponents[type];
-  return <IconComponent {...props} />;
-};
+  const IconComponent = iconComponents[type]
+  return <IconComponent {...props} />
+}
 
-export const icons = Object.keys(iconComponents) as IconProps['type'][];
+export const icons = Object.keys(iconComponents) as IconProps['type'][]
