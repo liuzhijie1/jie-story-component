@@ -1,6 +1,6 @@
 {
   "name": "jie-fstln-story-component",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "main": "dist/jie-fstln-story-component.umd.js",
   "module": "dist/jie-fstln-story-component.esm.js",
   "types": "dist/index.d.ts",
