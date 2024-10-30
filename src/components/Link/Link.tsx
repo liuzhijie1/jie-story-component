@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@/components/ui/button'
+import { Button } from '../FstlnButton/Button'
 import { Icon } from '../icon'
 import { clsx } from 'clsx'
 
