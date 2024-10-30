@@ -10,7 +10,7 @@ import {
   Users2
 } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
+import { Button } from '../FstlnButton/Button'
 import { Link } from '../Link'
 
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
